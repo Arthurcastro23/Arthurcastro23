@@ -54,7 +54,7 @@ personas2=[
     {"nombre":"Luis","edad":28,"ciudad":"CDMX"},
     {"nombre":"Marta","edad":35,"ciudad":"MTY"},
 ]
-nomVivCDMX=[P["nombre"].upper for P in personas2 if P["ciudad"]=="CDMX"]
+nomVivCDMX=[P["nombre"].upper() for P in personas2 if P["ciudad"]=="CDMX"]
 print(nomVivCDMX)
 
 mayor30=[(P["nombre"], P["edad"])for P in personas2 if P["edad"]>30]
@@ -67,17 +67,17 @@ menores35NoCDMX=[P["nombre"]for P in personas2 if P["edad"]<35 and P["ciudad"]!=
 print(menores35NoCDMX)
 
 #CSV = Valores separados por comas
-import csv
-with open("alumnos.csv", newline='') as a:
-    lectura=csv.reader(a)
-    for renglon in lectura:
-        print(renglon)
+#import csv
+#with open("alumnos.csv", newline='', encoding='utf-8') as a:
+ #   lectura=csv.reader(a)
+  #  for renglon in lectura:
+   #     print(renglon)
 
 #--------------------------------
-datos=[["nombre","edad","promedio"],["Ana",19,8.9],["Luis",17,9.1],]
-with open("alumnos2.csv", "w", newline='') as a:
-    esc=csv.writer(a)
-    esc.writerows(datos)
+#datos=[["nombre","edad","promedio"],["Ana",19,8.9],["Luis",17,9.1],]
+#with open("alumnos2.csv", "w", newline='', encoding='utf-8') as a:
+ #   esc=csv.writer(a)
+  #  esc.writerows(datos)
 
 #--------------------------------
 
@@ -100,7 +100,7 @@ print(np.greater(a1,a2))
 print(np.greater_equal(a1,a2))
 
 #elem1 < elem2
-print(np.grater_equal(a1,a2))
+print(np.greater_equal(a1,a2))
 
 print(np.less(a1,a2))
 
